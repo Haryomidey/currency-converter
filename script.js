@@ -15,9 +15,10 @@ const convertTo = document.querySelector("#select-2");
 const showRate = document.querySelector(".show-rate");
 
 changeValue.addEventListener('click', () => {
-    let tempFrom = convertFrom.value;
-    convertTo.value = tempFrom;
-    fetchData();
+  let tempFrom = convertFrom.value;
+  convertFrom.value = convertTo.value;
+  convertTo.value = tempFrom;
+  fetchData();
 })
 
 convertBtn.addEventListener("click", () => {
